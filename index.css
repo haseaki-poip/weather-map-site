@@ -1,0 +1,56 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100000;
+    
+}
+
+/* エラーモーダルがフェードイン */
+.fadeIn {
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes fade{
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 1;
+}
+}
+
+/* モーダルは最初非表示 */
+.modal {
+    display: none;
+}
+
+.modalContent {  
+    border-radius: 3px;
+    width: 100%;
+    max-width: 500px; /* 最大幅 */
+    text-align: center;
+  
+}
+
+/* モーダルのcloseボタン */
+.btn-close{
+    display: block;
+    padding:25px 0;
+    border: solid 1px black;
+    border-radius: 50%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
